@@ -1,3 +1,8 @@
+import Govayk
+
 while True:
-    text = input('basic > ')
-    print(text)
+    text = input('Govayk > ')
+    result, error = Govayk.run('<stdin>', text)
+
+    if error: print(error.as_string())
+    else: print(result)
